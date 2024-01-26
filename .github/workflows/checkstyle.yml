@@ -31,6 +31,7 @@ jobs:
           
       # Configures and runs checkstyle
       - name: Run Checkstyle
+        using: node.js 20
         run: |
           exec java -jar /opt/lib/checkstyle.jar "." -c "checkstyle_checks.xml" -f xml > results.xml
 
